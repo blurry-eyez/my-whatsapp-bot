@@ -1,3 +1,39 @@
+# WhatsApp Poll Attendance Bot 🤖📊
+
+A high-precision automation tool built with **Python** and **Selenium** to scrape, analyze, and report attendance data from WhatsApp Polls. 
+
+This bot is specifically engineered to handle WhatsApp Web's complex DOM, including **virtual scrolling**, **dynamic loading**, and **nested "See all" modals**, ensuring 100% accuracy in vote capturing.
+
+![Python](https://img.shields.io/badge/Python-3.10%2B-blue?style=flat&logo=python)
+![Selenium](https://img.shields.io/badge/Selenium-4.x-43B02A?style=flat&logo=selenium)
+![Status](https://img.shields.io/badge/Status-Production%20Ready-brightgreen)
+
+## 🌟 Key Features
+
+* **🎯 Targeted Poll Detection:** Automatically locates specific polls (e.g., "Whole day Absent for [Today]") within high-traffic groups.
+* **📜 Virtual List Scraper:** Uses a **"Scroll & Collect"** algorithm to capture voters from WhatsApp's virtualized lists, ensuring contacts at the very bottom are never missed.
+* **🔄 Smart Verification Loop:** Implements a self-correcting mechanism that compares scraped data against WhatsApp's official vote count. If numbers don't match, it automatically retries and drills down until they do.
+* **🔍 Triple-Fallback Extraction:** Uses three robust strategies to extract names, ensuring compatibility with:
+    * Saved Contacts (Standard DOM)
+    * Unsaved Numbers (Alternative DOM)
+    * Truncated Names (Title Attribute Extraction)
+* **📄 Automated Reporting:** Generates professional **PDF** and **CSV** reports containing names, timestamps, and batch details, sanitized for encoding issues (emojis, special spaces).
+* **🗄️ Database Integration:** Archives all attendance data into a **SQLite** database for historical tracking.
+
+## 📂 Project Structure
+
+```text
+whatsapp-poll-bot/
+├── poll_reader.py          # 🧠 CORE LOGIC: Scraper, Smart Loop, and Verification
+├── attendance_writer.py    # 📄 PDF/CSV Generator with encoding sanitization
+├── db.py                   # 🗄️ SQLite Database handler
+├── driver.py               # 🔧 Selenium WebDriver configuration
+├── test_read_report.py     # 🚀 Main entry point / Orchestrator
+├── requirements.txt        # 📦 Python dependencies
+└── reports/                # 📂 Output folder for generated reports
+
+
+
 WhatsApp Poll Attendance Bot 🤖📊
 A robust, automated Python bot that monitors WhatsApp Groups for specific "Absent" polls, scrapes voter data with pixel-perfect accuracy, saves records to a database, and generates daily PDF/CSV attendance reports.
 
