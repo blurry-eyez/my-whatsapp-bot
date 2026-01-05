@@ -1,5 +1,7 @@
 WhatsApp Poll Attendance Bot 🤖📊
 A robust, automated Python bot that monitors WhatsApp Groups for specific "Absent" polls, scrapes voter data with pixel-perfect accuracy, saves records to a database, and generates daily PDF/CSV attendance reports.
+
+
 🌟 Key Features
 • Smart Poll Detection: Automatically locates the "Whole day Absent" poll for the current date.
 • Virtual List Scraping: Handles WhatsApp's dynamic "virtual scrolling" to capture voters hidden deep in the DOM (fixing the "missing bottom items" issue).
