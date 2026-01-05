@@ -1,0 +1,6 @@
+selenium
+webdriver-manager
+apscheduler
+reportlab
+beautifulsoup4
+lxml
